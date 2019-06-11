@@ -11,8 +11,8 @@ cap = cv2.VideoCapture(path_1)   # 读入视频文件
 frame_num = cap.get(7)
 fill_num = int(math.log10(frame_num))+1     # 读取视频总帧数
 count = 0   # 总帧数计数
-output_count = 0 # 输出帧数计数
-rval=cap.isOpened()
+output_count = 0    # 输出帧数计数
+rval = cap.isOpened()
 #  timeF = 1  #视频帧计数间隔频率
 
 while rval:   # 循环读取视频帧
