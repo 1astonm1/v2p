@@ -17,12 +17,12 @@ rval=cap.isOpened()
 
 while rval:   # 循环读取视频帧
     count = count + 1
-    print("picture:"+str(count).zfill(fill_num))
+    print("picture:"+str(count).zfill(fill_num)+"total:" + int(frame_num))
     rval, frame = cap.read()
     if rval:
         if (count%frameFrequency) ==0:
             output_count = output_count +1
-           # cv2.imwrite(path_2+'/'+path_1[-42:-4]+'_'+str(count).zfill(fill_num) + '.jpg', frame)
+           # cv2.imwrite(path_2+'/'+path_1[-42:-4]+'_'+str(output_count).zfill(fill_num) + '.jpg', frame)
             cv2.imwrite(path_2 + '/' + str(output_count).zfill(fill_num) + '.jpg', frame)
             cv2.waitKey(1)
         # img为当前目录下新建的文件夹
